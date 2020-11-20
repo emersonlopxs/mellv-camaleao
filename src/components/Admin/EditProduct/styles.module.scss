@@ -1,0 +1,55 @@
+.AddContainer {
+  display: flex;
+  margin-top: 100px;
+  width: 100%;
+  justify-content: center;
+  .Container {
+    display: flex;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+    padding: 10px;
+  }
+  input {
+    margin-bottom: 16px;
+    width: 370px;
+  }
+  select {
+    margin-bottom: 16px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+    width: 370px;
+  }
+}
+.Sizes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 370px;
+
+  input {
+    margin: 20px;
+    width: 80px;
+  }
+}
+.Imagens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 370px;
+  input {
+    margin-top: 16px;
+    width: 370px;
+  }
+}

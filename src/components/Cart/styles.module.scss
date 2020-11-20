@@ -1,0 +1,65 @@
+.Container {
+  max-width: 1000px;
+  margin: auto;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .Vazio {
+    background-color: royalblue;
+    color: #fff;
+    padding: 20px;
+    border-left: 10px solid rgb(43, 70, 153);
+    border-radius: 3px;
+  }
+
+  a {
+    margin-top: 20px;
+  }
+
+  section {
+    margin-bottom: 20px;
+  }
+
+  .CartStyle {
+    // background-color: red;
+    box-shadow: 2px 2px 8px #888888;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #ddd;
+
+    &:hover {
+      background-color: #ccc;
+    }
+
+    display: flex;
+
+    span {
+      font-weight: bold;
+    }
+
+    > div > div {
+      margin-bottom: 7px;
+    }
+    
+    .Size {
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    img {
+      height: 100px;
+      margin-right: 20px;
+    }
+  }
+
+  .ToCheckout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

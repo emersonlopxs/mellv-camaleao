@@ -1,0 +1,109 @@
+.Container {
+  // max-width: 1000px;
+  // margin: auto;
+  text-align: center;
+  padding: 0 140px 60px 140px;
+  h2 {
+    font-size: 32px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    h3 {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    label {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.Login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  padding-right: 50px;
+
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+
+    input {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    input + label + input {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    button {
+      margin: 30px 0;
+      width: 100px;
+    }
+  }
+}
+
+.Register {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  h3 {
+    margin-bottom: 30px;
+  }
+  form {
+    margin-bottom: 30px;
+    .RegisterGroup {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      div {
+        width: 49%;
+      }
+    }
+    .InputGroup {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    p {
+      margin-bottom: 30px;
+      a {
+        color: #000;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+    button{
+      width: 100px;
+
+    }
+  }
+}
+.Checkbox {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  input {
+    height: 15px;
+    width: 15px !important;
+    margin: 0 10px 0 0 !important;
+  }
+  label {
+    margin: 0 !important ;
+  }
+}

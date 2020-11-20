@@ -1,0 +1,19 @@
+.Container {
+  .Card {
+    background-color: rgb(236, 233, 233);
+    padding: 20px;
+    border: 1px solid #222;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    .Details {
+      background-color: #fff;
+      margin-top: 20px;
+      padding: 20px;
+
+      img {
+        height: 250px;
+      }
+    }
+  }
+}

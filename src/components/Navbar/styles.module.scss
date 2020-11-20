@@ -1,0 +1,38 @@
+.Container {
+  header {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    justify-content: space-between;
+    // margin-bottom: 50px;
+    padding: 12px 140px;
+
+    .HeaderWrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      input {
+        padding: 10px;
+      }
+
+      img {
+        width: 200px;
+      }
+
+      .HeaderLinks {
+        margin-top: 20px;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          margin-right: 32px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

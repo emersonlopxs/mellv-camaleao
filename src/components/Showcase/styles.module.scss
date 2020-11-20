@@ -1,0 +1,30 @@
+.Grid {
+  // @media only screen and (max-width: 1024px) {
+  //   grid-template-columns: repeat(1, 1fr);
+  //   justify-items: center;
+  //   grid-gap: 14px;
+  //   padding: 0;
+  // }
+
+  align-content: center;
+  display: grid;
+  margin: 50px 0 50px 0;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 16px;
+  padding: 0 140px;
+  // background: #000;
+  // justify-items: center;
+}
+
+// // Small tablets and large smartphones (landscape view)
+// $screen-sm-min: 576px;
+
+// // Small tablets (portrait view)
+// $screen-md-min: 768px;
+
+// // Tablets and small desktops
+// $screen-lg-min: 992px;
+
+// // Large tablets and desktops
+// $screen-xl-min: 1200px;

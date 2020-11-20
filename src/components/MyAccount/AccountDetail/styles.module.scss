@@ -1,0 +1,32 @@
+.StyledForm {
+  .InputGroup {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    div {
+      width: 48%;
+    }
+  }
+  div {
+    margin-bottom: 20px;
+    width: 100%;
+    label {
+      font-size: 16px;
+      span {
+        color: red;
+      }
+    }
+    input {
+      margin-top: 5px;
+      width: 100%;
+    }
+    p {
+      font-size: 14px;
+      margin: 5px 0 20px 3px;
+    }
+  }
+  .SubmitButton {
+    height: 50px;
+    width: 165px;
+  }
+}
