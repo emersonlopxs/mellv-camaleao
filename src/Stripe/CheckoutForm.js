@@ -18,7 +18,16 @@ export const CheckoutForm = () => {
   const elements = useElements();
   const history = useHistory();
 
+  useEffect(() => {}, [history]);
+
   useEffect(() => {
+    const { token } = localStorage;
+
+    if (!token) {
+      history.push('/auth');
+      return;
+    }
+
     console.log('selectione um endereço -> ');
     async function getAddress() {
       try {
@@ -34,7 +43,7 @@ export const CheckoutForm = () => {
       }
     }
     getAddress();
-  }, []);
+  }, [history]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -107,6 +116,15 @@ export const CheckoutForm = () => {
     }
   };
 
+  const cpfMask = (value) => {
+    return value
+      .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
+      .replace(/(\d{3})(\d)/, '$1.$2') // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
+      .replace(/(\d{3})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+      .replace(/(-\d{2})\d+?$/, '$1'); // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+  };
+
   return (
     <div>
       <h3>Selecione um endereço</h3>
@@ -149,8 +167,9 @@ export const CheckoutForm = () => {
       />
       <input
         type="text"
+        maxLength='14'
         value={cpf}
-        onChange={(e) => setCpf(e.target.value)}
+        onChange={(e) => setCpf(cpfMask(e.target.value))}
         placeholder="CPF do titular"
         style={{ marginBottom: -30, width: '100%' }}
       />

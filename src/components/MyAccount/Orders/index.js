@@ -43,35 +43,39 @@ function Orders({ setSectionName, setActive }) {
       {/* <Table title="Pedidos" rows={orders} columnsName={columns} /> */}
 
       <section className={Container}>
-        <div>
-          {orders.map((item, index) => (
-            <div className={Card} key={index}>
-              <div>Numero do Pedido: {item.id}</div>
-              <div>Total: {item.total_price}</div>
-              <div>Nota: {item.note}</div>
-              <div>Endereço: {item.street}</div>
-              <div className={Details}>
-                Detalhes:{' '}
-                {item.details.map((el, index) => (
-                  <div
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => history.push('/product/' + el.product.id)}
-                    key={index}>
-                    <div>Quantidade: {el.amount}</div>
-                    <div>
-                      Tamanho:{' '}
-                      <span style={{ textTransform: 'uppercase' }}>
-                        {el.size}
-                      </span>
+        {orders.length > 0 ? (
+          <div>
+            {orders.map((item, index) => (
+              <div className={Card} key={index}>
+                <div>Numero do Pedido: {item.id}</div>
+                <div>Total: {item.total_price}</div>
+                <div>Nota: {item.note}</div>
+                <div>Endereço: {item.street}</div>
+                <div className={Details}>
+                  Detalhes:{' '}
+                  {item.details.map((el, index) => (
+                    <div
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => history.push('/product/' + el.product.id)}
+                      key={index}>
+                      <div>Quantidade: {el.amount}</div>
+                      <div>
+                        Tamanho:{' '}
+                        <span style={{ textTransform: 'uppercase' }}>
+                          {el.size}
+                        </span>
+                      </div>
+                      <div>Produto: {el.product.name}</div>
+                      <img src={el.product.images[0]} alt="" srcset="" />
                     </div>
-                    <div>Produto: {el.product.name}</div>
-                    <img src={el.product.images[0]} alt="" srcset="" />
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div>Sem pedidos...</div>
+        )}
       </section>
     </>
   );

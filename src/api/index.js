@@ -1,48 +1,7 @@
-// import axios from 'axios';
-// import toast from './toast';
-
-// console.log('API -> ', process.env.REACT_APP_API);
-
-// const api = axios.create({
-//   // baseURL: 'http://165.227.194.131:3333/',
-//   baseURL: process.env.REACT_APP_API,
-//   timeout: 100000,
-//   // headers: {'X-Custom-Header': 'foobar'}
-// });
-
-// // function errorResponseHandler(error) {
-// //   // check for errorHandle config
-// //   if (
-// //     error.config.hasOwnProperty('errorHandle') &&
-// //     error.config.errorHandle === false
-// //   ) {
-// //     return Promise.reject(error);
-// //   }
-
-// //   // if has response show the error
-// //   if (error.response) {
-// //     toast.error(error.response.data.message);
-// //   }
-// // }
-
-// // // apply interceptor on response
-// // axios.interceptors.response.use((response) => response, errorResponseHandler);
-
-// export default api;
-
 import axios from 'axios';
 import { store } from 'react-notifications-component';
 
-export let apiURL;
-export const extensionProfile = 'http://extension.lupuselit.me/';
 
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-  // dev code
-  apiURL = 'http://localhost';
-} else {
-  // production code
-  apiURL = 'http://167.71.163.123';
-}
 
 const base = axios.create({
   baseURL: process.env.REACT_APP_API,
