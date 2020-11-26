@@ -5,7 +5,7 @@ import { store } from 'react-notifications-component';
 
 const base = axios.create({
   baseURL: process.env.REACT_APP_API,
-  timeout: 6000,
+  // timeout: 6000,
 });
 
 // Setting defaults
