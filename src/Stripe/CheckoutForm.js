@@ -112,7 +112,23 @@ export const CheckoutForm = () => {
 
       history.push('/my-account/orders');
     } catch (error) {
-      console.log('error -> ', error);
+      console.log('error stripe? -> ', error.response);
+
+      if (error.response.data.type === 'stripe-error') {
+        store.addNotification({
+          title: 'Erro ao processar os dados do cartão',
+          message: 'Verifique os dados e tente novamente!',
+          type: 'danger',
+          insert: 'top',
+          container: 'top-right',
+          animationIn: ['animated', 'fadeIn'],
+          animationOut: ['animated', 'fadeOut'],
+          dismiss: {
+            duration: 8000,
+            onScreen: true,
+          },
+        });
+      }
     }
   };
 
@@ -167,7 +183,7 @@ export const CheckoutForm = () => {
       />
       <input
         type="text"
-        maxLength='14'
+        maxLength="14"
         value={cpf}
         onChange={(e) => setCpf(cpfMask(e.target.value))}
         placeholder="CPF do titular"
